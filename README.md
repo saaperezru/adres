@@ -1,7 +1,7 @@
 # Requerimientos
 Idealmente se espera que tenga Nix y DirENV instalados en la máquina para aprovechar las especificaciones en los archivos .envrc y shell.nix
 De lo contrario se asume que los siguientes paquetes están instalados:
- - Python 3.11
+ - Python 3.12
  - Poetry 1.8.3
  - Sqlite3
  - Poppler
@@ -24,6 +24,12 @@ poetry install
 ```
 # Uso
 ## Validador CSV
+```bash
+poetry run python manage.py makemigrations
+poetry run python manage.py migrate
+poetry run python manage.py createsuperuser
+poetry run python manage.py runserver
+```
 
 ## Extractor PDF
 Software para extraer el CUFE de archivos PDF a una BD SQLite
